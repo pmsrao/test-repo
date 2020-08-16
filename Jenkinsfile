@@ -1,20 +1,20 @@
 pipeline {
   agent {
     docker {
-      image 'node:14-alpine'
+      image 'continuumio/anaconda3'
     }
 
   }
   stages {
     stage('first stage') {
       steps {
-        sh 'node --version'
+        sh 'python --version'
       }
     }
 
     stage('second stage') {
       steps {
-        sh 'node --version'
+        sh 'pip --version'
       }
     }
 
