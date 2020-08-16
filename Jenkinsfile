@@ -12,5 +12,17 @@ pipeline {
       }
     }
 
+    stage('second stage') {
+      steps {
+        sh 'node --version'
+      }
+    }
+
+    stage('last stage') {
+      steps {
+        sh 'echo $HOME'
+      }
+    }
+
   }
 }
