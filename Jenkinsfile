@@ -20,7 +20,7 @@ pipeline {
 
     stage('last stage') {
       steps {
-        sh 'echo $HOME'
+        sh 'pip install mlflow'
       }
     }
 
