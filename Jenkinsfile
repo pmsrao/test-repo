@@ -20,7 +20,10 @@ pipeline {
 
     stage('last stage') {
       steps {
-        sh 'sudo pip install mlflow'
+        sh 'conda --version'
+        sh 'conda create --name env_mlflow python=3.7'
+        sh 'conda activate env_mlflow'
+        sh 'pip install mlflow'
       }
     }
 
